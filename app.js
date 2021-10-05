@@ -15,6 +15,13 @@ function calculateValue()
     const currentMarketValue = qty*mp;
     const profitAndLoss = currentMarketValue - investmentValue ;
     const percentageVal = profitAndLoss / bp * 100 ;
+    if(bp<0 || qty <0 || mp<0)
+    {
+        alert('Invalid Input')
+    }
+  else{
     outputDisplay.innerText='Your Investment Profit / Loss is =' + profitAndLoss + ' In Percentage = ' + percentageVal +'%'
+  }
+    
     return profitAndLoss
 }
